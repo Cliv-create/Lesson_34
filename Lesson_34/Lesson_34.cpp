@@ -54,7 +54,7 @@ public:
 		return false;
 	}
 
-	void PushLessValue(T value) {
+	int PushLessValue(T value) {
 		if (value < data.back()) {
 			data.push_back(value);
 			index++;
@@ -62,7 +62,7 @@ public:
 		else return -1;
 	}
 
-	void PushUnique(T value) {
+	int PushUnique(T value) {
 		if (!Contains(value)) {
 			data.push_back(value);
 			index++;
